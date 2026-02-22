@@ -7,7 +7,7 @@ namespace MenagerLekow.MVVM.MODEL
 {
     public class Leki
     {
-        [AutoIncrement]
+        [PrimaryKey,AutoIncrement]
         public int ID  { get; set; }
         public string nazwa { get; set; }
         public int ilosc { get; set; }

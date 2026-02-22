@@ -16,7 +16,6 @@ namespace MenagerLekow.Db
             polaczenie = new SQLiteConnection(InstancjaDb.sciezka, InstancjaDb.flagi);
             polaczenie.CreateTable<Harmonogram>();
             polaczenie.CreateTable<Leki>();
-            polaczenie.CreateTable<HarmonogramDTO>();
             polaczenie.Execute("PRAGMA page_size = 16384;");
             polaczenie.Execute("VACUUM");
         }
@@ -28,7 +27,8 @@ namespace MenagerLekow.Db
 
         public void CreateLeki(Leki lek)
         {
-            throw new NotImplementedException();
+            polaczenie.Insert(lek);
+
         }
 
         public void Delete()
@@ -66,14 +66,7 @@ namespace MenagerLekow.Db
             throw new NotImplementedException();
         }
 
-        HarmonogramDTO IBazaDanych.Select()
-        {
-            throw new NotImplementedException();
-        }
+      
 
-        ObservableCollection<HarmonogramDTO> IBazaDanych.SelectAll(string name)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

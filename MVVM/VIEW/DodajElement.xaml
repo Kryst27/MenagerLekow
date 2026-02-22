@@ -4,14 +4,28 @@
              x:Class="MenagerLekow.MVVM.VIEW.DodajElement"
              Title="DodajElement">
     <VerticalStackLayout>
-
-        <Label Text="nazwa"/>
-        <Entry x:Name="Nazwaleku" Placeholder="Nazwa"/>
-        <Label Text="Ilosc"/>
-        <Entry x:Name="Iloscleku" Placeholder="1"/>
-        <Label Text="Data zakupu"/>
-        <DatePicker x:Name="DataZakupu" DateSelected="DatePicker_DateSelected"/>
-        <Label Text="Data waznosci"/>
-        <DatePicker x:Name="DataWaznosci" DateSelected="DatePicker_DateSelected_1"/>
+        <Grid RowDefinitions=".2*,.8*" x:Name="lekigrid">
+     
+            <HorizontalStackLayout Grid.Row="0"  HeightRequest="70" >
+        
+                <Label x:Name="przycisk" Text="Leki >" FontSize="25" VerticalOptions="CenterAndExpand">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                
+            </HorizontalStackLayout>
+            <VerticalStackLayout Grid.Row="1" x:Name="lekigrid2">
+                <Label Text="nazwa"/>
+                <Entry x:Name="Nazwaleku" Placeholder="Nazwa"/>
+                <Label Text="Ilosc"/>
+                <Entry x:Name="Iloscleku" Placeholder="1"/>
+                <Label Text="Data zakupu"/>
+                <DatePicker x:Name="DataZakupu" DateSelected="DatePicker_DateSelected"/>
+                <Label Text="Data waznosci"/>
+                <DatePicker x:Name="DataWaznosci" DateSelected="DatePicker_DateSelected_1"/>
+                <Button Text="dodaj" Clicked="Button_Clicked_1"/>
+            </VerticalStackLayout>
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>

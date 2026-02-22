@@ -1,13 +1,23 @@
+using MenagerLekow.INTERFACES;
+using MenagerLekow.MVVM.MODEL;
+using MenagerLekow.MVVM.VIEWMODEL;
 using System.Threading.Tasks;
 
 namespace MenagerLekow.MVVM.VIEW;
 
 public partial class DodajElement : ContentPage
 {
-	public DodajElement()
-	{
-		InitializeComponent();
-	}
+    DodajElementViewModel wm;
+    private readonly IBazaDanych db;
+	public DodajElement(DodajElementViewModel wm, IBazaDanych db)
+    {
+        this.wm = wm;
+        this.db = db;
+        InitializeComponent();
+        BindingContext = wm;
+
+
+    }
     //Zwijanie Flyout'u przy przejsciu na tą stronę
     protected override void OnAppearing()
     {
@@ -23,6 +33,24 @@ public partial class DodajElement : ContentPage
         ///kolejna modyikacja
 		//modyfikacja z gita
     }
+    public async void dodaj()
+    {
+        Leki l = new Leki();
+        l.nazwa = Nazwaleku.Text;
+        l.ilosc = 22;
+        l.datazakupu = DateTime.Now;
+        l.datawaznosci = DateTime.Now;
+        try
+        {
+            wm.DodajNowyElement(l);
+
+        }
+        catch (Exception)
+        {
+
+          await  DisplayAlertAsync("Nieoczekiwany błąd", "Wystąpił nieoczekiwany błąd", "cofnij");
+        }
+    }
     
 
     private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
@@ -34,4 +62,28 @@ public partial class DodajElement : ContentPage
     {
 
     }
+
+    private void Button_Clicked_1(object sender, EventArgs e)
+    {
+     
+        dodaj();
+    }
+
+
+    private void TapGestureRecognizer_Tapped_1(object sender, TappedEventArgs e)
+    {
+        if (lekigrid2.IsVisible == true)
+        {
+            lekigrid2.IsVisible = false;
+            przycisk.Text = "Leki";
+        }
+        else
+        {
+            lekigrid2.IsVisible = true;
+            przycisk.Text = "Leki >";
+
+        }
+    }
+
+ 
 }

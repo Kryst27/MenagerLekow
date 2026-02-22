@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +7,7 @@ namespace MenagerLekow.MVVM.MODEL
 {
    public class Harmonogram
     {
+        [PrimaryKey,AutoIncrement]
         public int ID { get; set; }
         public int IDLEKI { get; set; }
         public string Nazwa { get; set; }

@@ -21,9 +21,8 @@ namespace MenagerLekow
 
 #if DEBUG
             builder.Services.AddTransient<glownaViewModel>();
+            builder.Services.AddTransient<DodajElementViewModel>();
             builder.Services.AddTransient<StronaGlowna>();
-            //rejestracja bazy danych w kontenerze DI
-            //dodano komentarz
             builder.Services.AddSingleton<IBazaDanych, BazaDanych>();
             builder.Services.AddTransient<DodajElement>();
 

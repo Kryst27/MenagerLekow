@@ -8,7 +8,6 @@ namespace MenagerLekow.MVVM.VIEWMODEL
 {
     public class glownaViewModel
     {
-        ObservableCollection<HarmonogramDTO> collection = new ObservableCollection<HarmonogramDTO>();
         public glownaViewModel()
         {
             

@@ -13,8 +13,7 @@ namespace MenagerLekow.INTERFACES
         public void Update();
          public void Delete();
          public void DeleteAll();
-        public ObservableCollection<HarmonogramDTO> SelectAll(string name);
-        public HarmonogramDTO Select();
+    
         public Leki SelectLek(string name);
         public Leki SelectLekiAll();
         public Harmonogram SelectHarmonogram(string name);
