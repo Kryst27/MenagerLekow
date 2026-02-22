@@ -6,12 +6,13 @@ using System.Text;
 
 namespace MenagerLekow.INTERFACES
 {
-    interface IBazaDanych
+    public interface IBazaDanych
     {
-        public void Create(); 
+        public void CreateLeki(Leki lek);
+        public void CreateHarmonogram(Harmonogram harm);
         public void Update();
-        public void Delete();
-        public void DeleteAll();
+         public void Delete();
+         public void DeleteAll();
         public ObservableCollection<HarmonogramDTO> SelectAll(string name);
         public HarmonogramDTO Select();
         public Leki SelectLek(string name);

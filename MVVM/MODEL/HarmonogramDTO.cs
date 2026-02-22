@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MenagerLekow.MVVM.MODEL
 {
-    class HarmonogramDTO
+    public class HarmonogramDTO
     {
     }
 }

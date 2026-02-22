@@ -1,4 +1,6 @@
-﻿using MenagerLekow.MVVM.VIEW;
+﻿using MenagerLekow.Db;
+using MenagerLekow.INTERFACES;
+using MenagerLekow.MVVM.VIEW;
 using MenagerLekow.MVVM.VIEWMODEL;
 using Microsoft.Extensions.Logging;
 
@@ -20,7 +22,8 @@ namespace MenagerLekow
 #if DEBUG
             builder.Services.AddTransient<glownaViewModel>();
             builder.Services.AddTransient<StronaGlowna>();
-
+            //rejestracja bazy danych w kontenerze DI
+            builder.Services.AddSingleton<IBazaDanych, BazaDanych>();
             builder.Services.AddTransient<DodajElement>();
 
             builder.Logging.AddDebug();

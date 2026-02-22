@@ -6,8 +6,12 @@
     <VerticalStackLayout>
 
         <Label Text="nazwa"/>
-        <Entry Placeholder="Nazwa"/>
+        <Entry x:Name="Nazwaleku" Placeholder="Nazwa"/>
         <Label Text="Ilosc"/>
-        <Button Clicked="Button_Clicked"/>
+        <Entry x:Name="Iloscleku" Placeholder="1"/>
+        <Label Text="Data zakupu"/>
+        <DatePicker x:Name="DataZakupu" DateSelected="DatePicker_DateSelected"/>
+        <Label Text="Data waznosci"/>
+        <DatePicker x:Name="DataWaznosci" DateSelected="DatePicker_DateSelected_1"/>
     </VerticalStackLayout>
 </ContentPage>

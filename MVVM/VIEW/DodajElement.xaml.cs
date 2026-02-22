@@ -8,18 +8,13 @@ public partial class DodajElement : ContentPage
 	{
 		InitializeComponent();
 	}
+    //Zwijanie Flyout'u przy przejsciu na tą stronę
     protected override void OnAppearing()
     {
         base.OnAppearing();
         Shell.Current.FlyoutIsPresented = false;
     }
-    protected override void OnDisappearing()
-    {
-        base.OnDisappearing();
-        Shell.Current.FlyoutIsPresented = false;
-
-
-    }
+   
 
     private async void Button_Clicked(object sender, EventArgs e)
     {
@@ -27,5 +22,16 @@ public partial class DodajElement : ContentPage
         ///cofniêcie do Ÿród³a stosu
         ///kolejna modyikacja
 		//modyfikacja z gita
+    }
+    
+
+    private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
+    {
+
+    }
+
+    private void DatePicker_DateSelected_1(object sender, DateChangedEventArgs e)
+    {
+
     }
 }

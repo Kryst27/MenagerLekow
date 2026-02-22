@@ -21,7 +21,12 @@ namespace MenagerLekow.Db
             polaczenie.Execute("VACUUM");
         }
 
-        public void Create()
+        public void CreateHarmonogram(Harmonogram harm)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CreateLeki(Leki lek)
         {
             throw new NotImplementedException();
         }
@@ -32,6 +37,26 @@ namespace MenagerLekow.Db
         }
 
         public void DeleteAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Harmonogram SelectHarmonogram(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Harmonogram SelectharmonogramALL()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Leki SelectLek(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Leki SelectLekiAll()
         {
             throw new NotImplementedException();
         }
@@ -47,26 +72,6 @@ namespace MenagerLekow.Db
         }
 
         ObservableCollection<HarmonogramDTO> IBazaDanych.SelectAll(string name)
-        {
-            throw new NotImplementedException();
-        }
-
-        Harmonogram IBazaDanych.SelectHarmonogram(string name)
-        {
-            throw new NotImplementedException();
-        }
-
-        Harmonogram IBazaDanych.SelectharmonogramALL()
-        {
-            throw new NotImplementedException();
-        }
-
-        Leki IBazaDanych.SelectLek(string name)
-        {
-            throw new NotImplementedException();
-        }
-
-        Leki IBazaDanych.SelectLekiAll()
         {
             throw new NotImplementedException();
         }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MenagerLekow.MVVM.MODEL
 {
-    class Harmonogram
+   public class Harmonogram
     {
         public int ID { get; set; }
         public int IDLEKI { get; set; }
