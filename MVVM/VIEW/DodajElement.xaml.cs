@@ -25,5 +25,6 @@ public partial class DodajElement : ContentPage
     {
         await Shell.Current.GoToAsync("..");
         ///cofniêcie do Ÿród³a stosu
+        ///kolejna modyikacja
     }
 }
