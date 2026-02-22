@@ -21,8 +21,9 @@ public partial class DodajElement : ContentPage
 
     }
 
-    private async Task Button_Clicked(object sender, EventArgs e)
+    private async void Button_Clicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync("..");
+        ///cofniêcie do Ÿród³a stosu
     }
 }
