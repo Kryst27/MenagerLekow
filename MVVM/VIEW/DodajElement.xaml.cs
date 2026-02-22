@@ -24,7 +24,8 @@ public partial class DodajElement : ContentPage
     private async void Button_Clicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync("..");
-        ///cofniêcie do Ÿród³a stosu
+        ///cofniÃªcie do Å¸rÃ³dÂ³a stosu
         ///kolejna modyikacja
+		//modyfikacja z gita
     }
 }
