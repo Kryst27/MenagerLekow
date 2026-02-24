@@ -70,20 +70,33 @@ public partial class DodajElement : ContentPage
     }
 
 
-    private void TapGestureRecognizer_Tapped_1(object sender, TappedEventArgs e)
+    private async void TapGestureRecognizer_Tapped_1(object sender, TappedEventArgs e)
     {
         if (lekigrid2.IsVisible == true)
         {
             lekigrid2.IsVisible = false;
-            przycisk.Text = "Leki";
+           await obraz.RotateTo(90, 500, Easing.Linear);
         }
         else
         {
             lekigrid2.IsVisible = true;
-            przycisk.Text = "Leki >";
+           await obraz.RotateTo(0, 500, Easing.Linear);
 
         }
     }
 
- 
+    private async void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
+    {
+        if (lekigrid3.IsVisible == true)
+        {
+            lekigrid3.IsVisible = false;
+            await obraz2.RotateTo(90, 500, Easing.Linear);
+        }
+        else
+        {
+            lekigrid3.IsVisible = true;
+            await obraz2.RotateTo(0, 500, Easing.Linear);
+
+        }
+    }
 }

@@ -4,16 +4,15 @@
              x:Class="MenagerLekow.MVVM.VIEW.DodajElement"
              Title="DodajElement">
     <VerticalStackLayout>
-        <Grid RowDefinitions=".2*,.8*" x:Name="lekigrid">
-     
-            <HorizontalStackLayout Grid.Row="0"  HeightRequest="70" >
+        <Grid RowDefinitions=".2*,.8*" x:Name="lekigrid"  Margin="80">
+            <HorizontalStackLayout Grid.Row="0"  HeightRequest="80" >
         
-                <Label x:Name="przycisk" Text="Leki >" FontSize="25" VerticalOptions="CenterAndExpand">
+                <Label x:Name="przycisk" TAext="Leki" FontSize="25" VerticalOptions="CenterAndExpand">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_1"/>
                     </Label.GestureRecognizers>
                 </Label>
-                
+                <Image x:Name="obraz" Source="ra.png" HeightRequest="10" WidthRequest="10"/>
             </HorizontalStackLayout>
             <VerticalStackLayout Grid.Row="1" x:Name="lekigrid2">
                 <Label Text="nazwa"/>
@@ -24,6 +23,28 @@
                 <DatePicker x:Name="DataZakupu" DateSelected="DatePicker_DateSelected"/>
                 <Label Text="Data waznosci"/>
                 <DatePicker x:Name="DataWaznosci" DateSelected="DatePicker_DateSelected_1"/>
+                <Button Text="dodaj" Clicked="Button_Clicked_1"/>
+            </VerticalStackLayout>
+        </Grid>
+        <Grid RowDefinitions=".2*,.8*" Margin="80">
+            <HorizontalStackLayout Grid.Row="0"  HeightRequest="80" >
+
+                <Label x:Name="harmonogramP" Text="Harmonogram" FontSize="25" VerticalOptions="CenterAndExpand">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Image x:Name="obraz2" Source="ra.png" HeightRequest="10" WidthRequest="10"/>
+            </HorizontalStackLayout>
+            <VerticalStackLayout Grid.Row="1" x:Name="lekigrid3">
+                <Label Text="nazwa"/>
+                <Entry  Placeholder="Nazwa"/>
+                <Label Text="Ilosc"/>
+                <Entry Placeholder="1"/>
+                <Label Text="Data zakupu"/>
+                <DatePicker />
+                <Label Text="Data waznosci"/>
+                <DatePicker />
                 <Button Text="dodaj" Clicked="Button_Clicked_1"/>
             </VerticalStackLayout>
         </Grid>
